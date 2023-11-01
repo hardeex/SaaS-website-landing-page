@@ -1,6 +1,13 @@
 // declaring variables
 let navbar = document.querySelector('.navbar');
 let searchForm = document.querySelector('.search-form');
+// Add this JavaScript code to show and hide the modal when the "Privacy Policy" link is clicked.
+const privacyLink = document.querySelector('a[href="#privacy-policy"]');
+const privacyModal = document.getElementById('privacyModal');
+const acceptButton = document.getElementById('acceptButton');
+const agreeCheckbox = document.getElementById('agreeCheckbox');
+
+
 
 // handling the preloader and setting the timer to 5 seconds
 $(document).ready(function() {
@@ -101,3 +108,22 @@ $(document).ready(function() {
     });
 });
 
+
+// handling the privacy policy modal class
+privacyLink.addEventListener('click', () => {
+  privacyModal.style.display = 'block';
+});
+
+acceptButton.addEventListener('click', () => {
+  if (agreeCheckbox.checked) {
+    privacyModal.style.display = 'none';
+    // You can add additional logic here, e.g., store the user's acceptance in local storage.
+  }
+});
+
+// Close the modal if the user clicks outside the modal content.
+window.addEventListener('click', (event) => {
+  if (event.target === privacyModal) {
+    privacyModal.style.display = 'none';
+  }
+});
