@@ -1,842 +1,792 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
-:root{
-    --bg:rgb(243, 239, 239);
-    --border:.1rem solid rgba(255,255,255,.3);
-    --header-background-color: darkblue;
-    --header-background-color-hover: rgb(24, 24, 230);
+:root {
+  --bg: rgb(243, 239, 239);
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --header-background-color: darkblue;
+  --header-background-color-hover: rgb(24, 24, 230);
 }
 
-*{
-    font-family: 'Roboto', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none; border:none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
 }
 
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 9rem;
-    scroll-behavior: smooth;
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar{
-    width: .8rem;
+html::-webkit-scrollbar {
+  width: 0.8rem;
 }
 
-html::-webkit-scrollbar-track{
-    background: transparent;
+html::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
-    background: #fff;
-    border-radius: 5rem;
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
 }
 
-body{
-    background: var(--bg);
+body {
+  background: var(--bg);
 }
 
-section{
-    padding:2rem 7%;
-    margin-top: 100px;
+section {
+  padding: 2rem 7%;
+  margin-top: 100px;
 }
 
-
-
-p{
-    color: white;
-    font-size: 1.5rem;
-    margin: 15px 0;
+p {
+  color: white;
+  font-size: 1.5rem;
+  margin: 15px 0;
 }
-
 
 button {
-    font-size: 1.8rem; 
-    border: none; 
-    background-color: var(--header-background-color); 
-    color: #fff; 
-    border-radius: 20px;
-    padding: 12px 20px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
+  font-size: 1.8rem;
+  border: none;
+  background-color: var(--header-background-color);
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: var(--header-background-color-hover); 
+  background-color: var(--header-background-color-hover);
 }
 
 /* Styles for the preloader container */
 .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--header-background-color-hover); /* Background color of the preloader */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Make sure the preloader is on top of everything */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-
-
 
 /* Styles for the preloader text */
 .preloader-text {
-    font-size: 3.5rem; /* Adjust the font size as needed */
-    color: white; /* Text color */
+  font-size: 3.5rem;
+  color: white;
 }
 
-
 #scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
 }
 
 #scroll-to-top a {
-    font-size: 24px;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    z-index: 9999;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
+  font-size: 24px;
+  background-color: var(--header-background-color);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
 }
 
 #scroll-to-top a:hover {
-    background-color: #267bbf;
+  background-color: var(--header-background-color-hover);
 }
 
-
-.header{
-    background: var(--header-background-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:1.5rem 7%;
-    border-bottom: var(--border);
-    position: fixed;
-    top:0; left: 0; right: 0;
-    z-index: 1000;
+.header {
+  background: var(--header-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-.header .logo img{
-    height: 6rem;
+.header .logo img {
+  height: 6rem;
 }
 
 .header .navbar a,
-.auth a{
-    margin:0 1rem;
-    font-size: 1.6rem;
-    color:#fff;
+.auth a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff;
 }
 
-.header .navbar a:hover{
-    color:var(--header-background-color-hover);
-    border-bottom: .1rem solid var(--header-background-color);
-    padding-bottom: .5rem;
+.header .navbar a:hover {
+  color: var(--header-background-color-hover);
+  border-bottom: 0.1rem solid var(--header-background-color);
+  padding-bottom: 0.5rem;
 }
 
-
-
-#menu-btn{
-    display: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
+#menu-btn {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.header .search-form{
-    position: absolute;
-    top:115%; right: 7%;
-    background: #fff;
-    width: 50rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
-.header .search-form.active{
-    transform: scaleY(1);
+.header .search-form.active {
+  transform: scaleY(1);
 }
 
-.header .search-form input{
-    height: 100%;
-    width: 100%;
-    font-size: 1.6rem;
-    color:var(--black);
-    padding:1rem;
-    text-transform: none;
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  text-transform: none;
 }
 
-.header .search-form label{
-    cursor: pointer;
-    font-size: 2.2rem;
-    margin-right: 1.5rem;
-    color:var(--black);
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
 }
 
-.header .search-form label:hover{
-    color:var(--main-color);
+.header .search-form label:hover {
+  color: var(--main-color);
 }
-
 
 .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url(/images/blue-background.avif) no-repeat;
-    background-size: cover;
-    background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/images/blue-background.avif) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .home .content h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    font-size: 3.9rem;
-    margin: 0; 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-size: 3.9rem;
+  margin: 0;
 }
-
 
 .image-container {
-    flex: 1; 
-    text-align: right; 
-    width: 30%;
+  flex: 1;
+  text-align: right;
+  width: 30%;
 }
-
-
 
 /* Styling the feature section */
 
 #features {
-    background-color: #f5f5f5;
-    text-align: center; 
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
-#features h2{
-    text-align: center;
-
+#features h2 {
+  text-align: center;
 }
 
-#features h3{
-    color: #5617e9;
-    font-size: 3rem;
-    margin: 20px;
+#features h3 {
+  color: #5617e9;
+  font-size: 3rem;
+  margin: 20px;
 }
 #features p {
-    font-size: 1.2rem;
-    color: #666;
-    margin: 20px 0;
-    padding: 10px;
-    line-height: 20px;
-    
+  font-size: 1.2rem;
+  color: #666;
+  margin: 20px 0;
+  padding: 10px;
+  line-height: 20px;
 }
 
 /* Style the feature items */
 .feature-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .feature-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  width: 300px;
 }
 
 .item-img {
-    text-align: center;
+  text-align: center;
 }
 
 .item-img img {
-    max-width: 100px;
-    height: auto;
+  max-width: 100px;
+  height: auto;
 }
 
 .item-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
 }
 
 .item-desc {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Hover effect for feature items */
 .feature-item:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }
-
-
 
 .crm-solution {
-    display: flex;
-    align-items: center;
-    margin-top: 230px;
+  display: flex;
+  align-items: center;
+  margin-top: 230px;
 }
 
-.crm-solution img{
-    margin-top: -150px;
+.crm-solution img {
+  margin-top: -150px;
 }
 
 .crm-text {
-    
-    text-align: justify;
+  text-align: justify;
 }
 
 .offering-text {
-    font-size: 2rem;
-    color: #3498db;
-    font-weight: bold;
+  font-size: 2rem;
+  color: #3498db;
+  font-weight: bold;
 }
 
 .solution-title {
-    font-size: 3rem;
-    color: var(--header-background-color);
-    text-align: left;
+  font-size: 3rem;
+  color: var(--header-background-color);
+  text-align: left;
 }
 
 .solution-description {
-    font-size: 1.1rem;
-    color: #666;
-    margin-top: 10px;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 10px;
 }
 
 /* Your existing CSS remains unchanged */
 
 .accordion {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    margin-top: 20px;
-    cursor: pointer;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    padding: 10px; 
-    background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: white;
 }
 
-
 .accordion-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .accordion-header-top {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .accordion-img {
-    font-size: 2rem;
-    color: #3498db;
-    margin-right: 10px;
+  font-size: 2rem;
+  color: #3498db;
+  margin-right: 10px;
 }
 
 h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
 }
 
 .accordion-arrow {
-    font-size: 1.5rem;
-    color: #666;
+  font-size: 1.5rem;
+  color: #666;
 }
 
 .accordion-content {
-    display: none;
-    font-size: 1rem;
-    color: #666;
-    margin-top: 10px;
+  display: none;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
 }
 
 /* Define styles for the expanded state */
 .accordion.expanded .accordion-content {
-    display: block;
+  display: block;
 }
-
 
 /* end of styling the feature section */
 
 /** testimonial section */
 
 .testi {
-    text-align: center;
-    padding: 40px;
+  text-align: center;
+  padding: 40px;
 }
 
 .testi h3 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .testi h2 {
-    font-size: 4.5rem;
-    color: var(--header-background-color-hover);
-    margin-bottom: 10px;
+  font-size: 4.5rem;
+  color: var(--header-background-color-hover);
+  margin-bottom: 10px;
 }
 
 .testi p {
-    color: #666;
-    margin-bottom: 30px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-
 .testimonial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%; 
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s, opacity 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .testimonial-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; 
-    gap: 20px;
-    overflow: hidden;  
-    flex-wrap: nowrap; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
-
 .testimonial.active {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .testimonial-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
 }
 
 .testimonial-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-content h3 {
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .testimonial-content p {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 .testimonial-navigation {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .testimonial-dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #666;
-    cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #666;
+  cursor: pointer;
 }
 
 .testimonial-dot.active {
-    background-color: #3498db;
+  background-color: var(--header-background-color);
 }
 
 /** end of testimonial */
 
-
 /*** Styling the pricing section */
 .pricing {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    text-align: center;
+  background-color: var(--header-background-color-hover);
+  padding: 60px 0;
+  text-align: center;
 }
 
 .pricing h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 20px;
 }
 
 .pricing-tiers {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .pricing-tier {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 20px;
-    width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  width: 300px;
 }
 
 .pricing-tier h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .pricing-tier .price {
-    font-size: 1.5rem;
-    color:var(--header-background-color-hover);
-    margin: 10px 0;
+  font-size: 1.5rem;
+  color: var(--header-background-color-hover);
+  margin: 10px 0;
 }
 
 .pricing-tier ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .pricing-tier li {
-    font-size: 1.2rem;
-    color: #666;
-    margin: 5px 0;
+  font-size: 1.2rem;
+  color: #666;
+  margin: 5px 0;
 }
-
-
-
 
 /** end of styling the pricing section */
 
 .contact h1 {
-    font-size: 4rem;
-    text-align: center;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .contact .row {
-    display: flex;
-    background: var(--header-background-color-hover);
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  background: var(--header-background-color-hover);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .contact .row .map {
-    flex: 1 1 45rem;
-    width: 100%;
-    object-fit: cover;
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .contact .row form {
-    flex: 1 1 45rem;
-    padding: 5rem 2rem;
-    text-align: center;
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .contact .row form h3 {
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    color: #fff;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
 }
 
 .contact .row form .inputBox {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: var(--border);
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: var(--border);
 }
 
 .contact .row form .inputBox span {
-    color: #fff;
-    font-size: 2rem;
-    padding-left: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
 }
 
 .contact .row form .inputBox input,
 .contact .row form .inputBox textarea {
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: #fff;
-    text-transform: none;
-    background: none;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
 }
 
 .contact .row form .inputBox textarea {
-    resize: none; 
+  resize: none;
 }
-
-
 
 /* Subscription section */
 .subscribe {
-    background-color: #f5f5f5;
-    padding: 60px 0;
-    text-align: center;
+  background-color: #f5f5f5;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .subscribe-container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.subscribe p{
-    color: black;
+.subscribe p {
+  color: black;
 }
 
-
-.subscribe h3{
-    font-size: 3.5rem;
+.subscribe h3 {
+  font-size: 3.5rem;
 }
-
 
 .subscribe-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-
-
-
-.footer{
-    background: darkblue;
-    text-align: center;
+.footer {
+  background: darkblue;
+  text-align: center;
 }
 
-.footer .share{
-    padding:1rem 0;
+.footer .share {
+  padding: 1rem 0;
 }
 
-.footer .share a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: var(--border);
+  margin: 0.3rem;
+  border-radius: 50%;
+}
+
+.footer .share a:hover {
+  background-color: var(--header-background-color-hover);
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .links a {
+  padding: 0.7rem 2rem;
+  color: #fff;
+  border: var(--border);
+  font-size: 2rem;
+}
+
+.footer .links a:hover {
+  background: var(--header-background-color-hover);
+}
+
+.footer .credit {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: lighter;
+  padding: 1.5rem;
+}
+
+/* media queries  for handling responsivess */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
     font-size: 2rem;
-    color:#fff;
-    border:var(--border);
-    margin:.3rem;
-    border-radius: 50%;
-}
+  }
 
-.footer .share a:hover{
-    background-color: var(--header-background-color-hover);
-}
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+  }
 
-.footer .links{
-    display: flex;
+  .home {
+    background-position: left;
     justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-    gap:1rem;
+    text-align: center;
+  }
+
+  .home .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
 }
 
-.footer .links a{
-    padding:.7rem 2rem;
-    color:#fff;
-    border:var(--border);
-    font-size: 2rem;
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
-
-.footer .links a:hover{
-    background:var(--header-background-color-hover);
-}
-
-.footer .credit{
-    font-size: 2rem;
-    color:#fff;
-    font-weight: lighter;
-    padding:1.5rem;
-}
-
-.footer .credit span{
-    color:var(--header-background-color);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries  */
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-
-    .header{
-        padding:1.5rem 2rem;
-    }
-
-    section{
-        padding:2rem;
-    }
-
-}
-
-@media (max-width:768px){
-
-    #menu-btn{
-        display: inline-block;
-    }
-
-    .header .navbar{
-        position: absolute;
-        top:100%; right: -100%;
-        background: #fff;
-        width: 30rem;
-        height: calc(100vh - 9.5rem);
-    }
-
-    .header .navbar.active{
-        right:0;
-    }
-
-    .header .navbar a{
-        color:var(--black);
-        display: block;
-        margin:1.5rem;
-        padding:.5rem;
-        font-size: 2rem;
-    }
-
-    .header .search-form{
-        width: 90%;
-        right: 2rem;
-    }
-
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .home .content h3{
-        font-size: 4.5rem;
-    }
-
-    .home .content p{
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (max-width:450px){
-
-    html{
-        font-size: 50%;
-    }
-
-}
-
 
 /* Styles for smaller screens (e.g., tablets and below) */
 @media (max-width: 768px) {
-    .crm-solution {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-    }
+  .crm-solution {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
 
-    .solution-title {
-        font-size: 2rem;
-        text-align: center;
-    }
+  .solution-title {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-    .accordion-header {
-        grid-template-columns: 1fr auto;
-    }
+  .accordion-header {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 /* Styles for even smaller screens (e.g., mobile phones) */
 @media (max-width: 480px) {
-    .crm-solution {
-        margin-top: 50px;
-    }
+  .crm-solution {
+    margin-top: 50px;
+  }
 
-    .crm-solution img{
-        margin-top: 50px;
-    }
+  .crm-solution img {
+    margin-top: 50px;
+  }
 
-    .solution-title {
-        font-size: 1.5rem;
-    }
+  .solution-title {
+    font-size: 1.5rem;
+  }
 
-    .accordion-header {
-        grid-template-columns: 1fr auto;
-    }
+  .accordion-header {
+    grid-template-columns: 1fr auto;
+  }
 
-    .accordion-img {
-        font-size: 1.5rem;
-        margin-right: 5px;
-    }
+  .accordion-img {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
 
-    h3 {
-        font-size: 1rem;
-    }
+  h3 {
+    font-size: 1rem;
+  }
 }

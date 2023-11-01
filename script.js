@@ -1,24 +1,29 @@
+// declaring variables
+let navbar = document.querySelector('.navbar');
+let searchForm = document.querySelector('.search-form');
+
+// handling the preloader and setting the timer to 5 seconds
 $(document).ready(function() {
     // Hide the preloader when the page is fully loaded
-    $(".preloader").fadeOut(5000); // Adjust the duration as needed
+    $(".preloader").fadeOut(5000); 
 });
 
-let navbar = document.querySelector('.navbar');
 
+// handling the nav menu in a responsive mode
 document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
 }
 
-let searchForm = document.querySelector('.search-form');
 
+// handling the search form
 document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
     navbar.classList.remove('active');
 }
 
 
-
+// handling the scroll view
 window.onscroll = () =>{
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
@@ -29,7 +34,7 @@ window.onscroll = () =>{
 
 
 
-
+// handling the testimonial section slides/carousal
 $(document).ready(function () {
     const testimonials = $('.testimonial');
     const dots = $('.testimonial-dot');
@@ -67,7 +72,7 @@ $(document).ready(function () {
 
 
 
-
+// handling the accordion in the featured section
 $(document).ready(function () {
     $(".accordion-arrow").click(function () {
         var accordion = $(this).closest('.accordion');
@@ -77,7 +82,7 @@ $(document).ready(function () {
 
 
 
-// navigate up and down
+// navigate up and down button
 
 $(document).ready(function() {
     // Show the "Scroll to Top" button when the user scrolls down
