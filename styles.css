@@ -200,6 +200,7 @@ button:hover {
   background-position: center;
 }
 
+
 .home .content {
   display: flex;
   justify-content: space-between;
@@ -212,6 +213,11 @@ button:hover {
   color: white;
   font-size: 3.9rem;
   margin: 0;
+}
+
+.home .content button{
+  background-color: white;
+  color: black;
 }
 
 .image-container {
@@ -766,15 +772,17 @@ input[type="email"] {
   }
 
   .home .content {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
   }
 
   .image-container {
-    width: 100%;
+   
     margin-top: 20px;
     text-align: center;
+    line-height: 15px;
   }
+
   .home {
     background-position: left;
     justify-content: center;
@@ -785,8 +793,14 @@ input[type="email"] {
     font-size: 4.5rem;
   }
 
+  .home .content button{
+    background-color: white;
+    color: black;
+  }
+
   .home .content p {
     font-size: 1.5rem;
+    width: 400px;
   }
 }
 
