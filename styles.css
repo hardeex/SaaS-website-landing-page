@@ -41,6 +41,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 section {
@@ -777,10 +778,9 @@ input[type="email"] {
   }
 
   .image-container {
-   
     margin-top: 20px;
     text-align: center;
-    line-height: 15px;
+    
   }
 
   .home {
@@ -801,6 +801,7 @@ input[type="email"] {
   .home .content p {
     font-size: 1.5rem;
     width: 400px;
+    line-height: 15px;
   }
 }
 
