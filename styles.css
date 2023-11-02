@@ -217,7 +217,7 @@ button:hover {
 .image-container {
   flex: 1;
   text-align: right;
-  width: 40%;
+  width: 30%;
 }
 
 /* Styling the feature section */
@@ -766,16 +766,15 @@ input[type="email"] {
   }
 
   .home .content {
-    flex-direction: column;
+    flex-direction: column; 
     text-align: center;
   }
 
   .image-container {
     width: 100%;
-    margin-top: 20px; /* Add some spacing between the heading and the image on small screens */
+    margin-top: 20px;
     text-align: center;
   }
-
   .home {
     background-position: left;
     justify-content: center;
