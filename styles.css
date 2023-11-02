@@ -217,6 +217,7 @@ button:hover {
 .image-container {
   flex: 1;
   text-align: right;
+  width: 40%;
 }
 
 /* Styling the feature section */
@@ -762,6 +763,17 @@ input[type="email"] {
   .header .search-form {
     width: 90%;
     right: 2rem;
+  }
+
+  .home .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    margin-top: 20px; /* Add some spacing between the heading and the image on small screens */
+    text-align: center;
   }
 
   .home {
