@@ -195,7 +195,7 @@ button:hover {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(/images/blue-background.avif) no-repeat;
+  background: url(images/blue-background.avif) no-repeat;
   background-size: cover;
   background-position: center;
 }
